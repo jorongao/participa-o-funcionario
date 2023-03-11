@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt.br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>participação de lucro para os funcionarios</h1>
+    <p>funcionario:<span id="colaborador"></span></p>
+    <p>nome:<span id="nomefun"></span></p>
+    <p>bonus:<span id="bonusfun"></span></p>
+    <script>
+        let funcionario = Number(prompt("você é um funcionário? \n 1-sim \n 2-não"));
+        let bonus;
+        let fun;
+        let nome;
+        let tempo;
+
+        if (funcionario === 1) {
+            fun = "QUE LEGAL!!! você tem direito ao bônus.";
+            tempo = prompt("quanto tempo você tem na organização.\n 1-de 1 a 10 \n 2-10 a 20 anos \n 3-20 a 30 anos \n 4-acima de 30 anos")
+            nome = prompt("DIGITE O SEU NOME")
+
+            if (tempo == 1) { bonus = "2.500" }
+            else if (tempo == 2) { bonus = "10.000,00" }
+            else if (tempo == 3) { bonus = "15.000,00" }
+            else if (tempo == 4) { bonus = "20.000,00" }
+
+            else {
+                bonus = "0,00";
+            }
+
+        } else {
+            fun = "que pena... você não trbalha conosco."
+        }
+        document.getElementById("colaborador").innerHTML = fun;
+        document.getElementById("nomefun").innerHTML = nome;
+        document.getElementById("bonusfun").innerHTML = bonus;
+    </script>
+</body>
+
+</html>
